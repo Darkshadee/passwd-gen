@@ -35,6 +35,63 @@ body {
     justify-content: center;
     padding: 10px;
     min-height: 100vh;
+    overflow: hidden;
+}
+
+.done {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-1em);
+    color: #000;
+    transition: all .500s;
+}
+
+.maincontainer {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    width: 100vw;
+    height: 210px;
+    margin-top: -15px;
+}
+
+.animcon {
+    background-color: white;
+    overflow: hidden;
+    /*overflow hidden because to keep the hand image hidden below*/
+    margin-top: 0px;
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    background-image: url(https://raw.githubusercontent.com/naaficodes/Monkey-Login/master/images/monkey.gif);
+    background-size: 90% 85%;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .2);
+    /*flex center to keep the hand image in the center*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.animcon img {
+    margin-top: 110%;
+    height: 170px;
+    width: 170px;
+    transition: 1s;
+}
+
+.formcon {
+    margin-top: 38px;
+}
+
+.copied .done {
+    opacity: 1;
+    transform: translateY(-2em);
 }
 
 p {
@@ -269,6 +326,21 @@ input[type=checkbox] {
         transform: translateX(0px);
     }
     .floating-btn {
-        right: 10px;
+        right: 9px;
+        font-size: 15px;
+        bottom: 60px;
+        line-height: 10px;
+    }
+    .floating-text {
+        font-size: 12px;
+    }
+    .maincontainer {
+        margin-top: -100px;
+    }
+    .animcon {
+        margin-top: -65px;
+    }
+    .container {
+        margin-top: -75px;
     }
 }
